@@ -7,6 +7,9 @@ export default defineConfig({
     description: "技术学习记录",
     cleanUrls: true, // 更加简洁的URL（去除.html）
     lastUpdated: true, // 将md文件的git最后提交时间添加到元数据中
+    sitemap: {
+        hostname: "https://nan-mu.asia/"
+    },
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
