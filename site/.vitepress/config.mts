@@ -23,8 +23,12 @@ export default defineConfig({
             }
         ],
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+            { icon: 'github', link: 'https://github.com/nan-mu' }
         ],
+        search: {
+            provider: "local"
+        },
+        logo: "./icon.svg",
         footer: {
             message: "MIT Lincense",
             copyright: "Copyright © 2024-present nan-mu.<br/>All rights reserved."
