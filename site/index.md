@@ -1,6 +1,18 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
-layout: page
+layout: home
+
+hero:
+  name: "nan-mu's blog"
+  text: "楠木的个人博客"
+  tagline: 
+  actions:
+    - theme: brand
+      text: 学校报告
+      link: /report
+    # - theme: alt
+    #   text: API Examples
+    #   link: /api-examples
 ---
 
 # 主页
