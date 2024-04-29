@@ -1,0 +1,13 @@
+/* .vitepress/theme/custom.css */
+:root {
+    --gray-color: #87c1af;
+    --yellow-color: #eca93b;
+    --red-color: #9a2d28;
+    --background-color: #f5eedb;
+    --origan-color: #f06734;
+    --vp-c-bg: #f5eedb;
+}
+
+body {
+    background-image: url("public/img/background-grid.png");
+}
