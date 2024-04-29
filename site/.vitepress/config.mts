@@ -17,7 +17,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
-            { text: '学校报告', link: '/report-list' },
+            { text: '学校报告', link: '/report' },
             { text: "阅读笔记", link: '/article-list' },
         ],
         socialLinks: [
