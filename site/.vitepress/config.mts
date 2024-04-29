@@ -10,20 +10,15 @@ export default defineConfig({
     sitemap: {
         hostname: "https://nan-mu.asia/"
     },
+    markdown: {
+        lineNumbers: true,
+    },
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: 'Home', link: '/' },
-            { text: 'List', link: '/markdown-examples' }
-        ],
-        sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    { text: 'Markdown Examples', link: '/markdown-examples' },
-                    { text: 'Runtime API Examples', link: '/api-examples' }
-                ]
-            }
+            { text: '学校报告', link: '/report-list' },
+            { text: "阅读笔记", link: '/article-list' },
         ],
         socialLinks: [
             { icon: 'github', link: 'https://github.com/nan-mu' }
