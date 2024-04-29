@@ -1,3 +1,3 @@
 fn main() {
-    todo!("检查site下所有md文件，是否有敏感信息");
+    println!("检查site下所有md文件，是否有敏感信息");
 }
