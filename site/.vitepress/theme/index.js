@@ -1,12 +1,18 @@
 import DefaultTheme from 'vitepress/theme';
 import giscusTalk from 'vitepress-plugin-comment-with-giscus';
-import { useData, useRoute } from 'vitepress';
+import busuanzi from 'busuanzi.pure.js'
+import { useData, useRoute, inBrowser } from 'vitepress';
 import { toRefs } from "vue";
 
 export default {
     ...DefaultTheme,
     enhanceApp(ctx) {
         DefaultTheme.enhanceApp(ctx);
+        if (inBrowser) {
+            ctx.router.onAfterRouteChanged = () => {
+                busuanzi.fetch()
+            }
+        }
         // ...
     },
     setup() {
