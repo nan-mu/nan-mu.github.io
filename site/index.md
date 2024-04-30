@@ -20,3 +20,6 @@ hero:
 设计有点难...vitepress根本没法自己使用主题拓展，有不想整官方主题。
 
 之后再说吧，先把文章放上来
+
+本站总访问量 <span id="busuanzi_value_site_pv" /> 次
+本站访客数 <span id="busuanzi_value_site_uv" /> 人次
