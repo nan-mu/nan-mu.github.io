@@ -29,28 +29,28 @@ nav:
 social_links:
   -
     icon: github
-    link: http://github.com/probberechts/cactus-dark
-  -
-    icon: twitter
-    link: /
-  -
-    icon: facebook
-    link: /
+    link: https://github.com/nan-mu
+  # -
+  #   icon: twitter
+  #   link: /
+  # -
+  #   icon: facebook
+  #   link: /
   -
     icon: mail
-    link: mailto:name@email.com
-  -
-    icon: mastodon
-    label: mastodon.social
-    link: https://mastodon.social/@alice
-  -
-    icon: mastodon
-    label: fosstodon.org
-    link: https://fosstodon.org/@alice
+    link: mailto:mu.nan.11@outlook.com
+  # -
+  #   icon: mastodon
+  #   label: mastodon.social
+  #   link: https://mastodon.social/@alice
+  # -
+  #   icon: mastodon
+  #   label: fosstodon.org
+  #   link: https://fosstodon.org/@alice
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
-tags_overview: false
+tags_overview: true
 
 # Customize the overview with the most recent blog posts on the index page.
 # Options:
@@ -74,7 +74,7 @@ archive:
 # Options:
 #   - show_updated: show the last modification date.
 post:
-  show_updated: false
+  show_updated: true
 
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
@@ -87,8 +87,8 @@ copyright:
 #   - enabled: whether to enable the 404 page (404.html).
 error_404:
   enabled: true
-  title: "404 Page Not Found"
-  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+  title: "404 \n寄寄寄"
+  description: "这个页面不见了，可能是因为链接错误或者作者删除了这个页面。"
 
 
 ##############################################################################
@@ -149,7 +149,7 @@ page_width: 48
 ##############################################################################
 
 # Enable or disable the RSS feed.
-rss: false
+rss: 
 
 # Turn your web pages into graph objects (see http://ogp.me).
 open_graph:
