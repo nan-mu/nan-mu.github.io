@@ -107,7 +107,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/icon.svg
+  url: /images/icon_write.svg
   gravatar: false
   grayout: true
 

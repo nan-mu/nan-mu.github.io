@@ -1,0 +1,10 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#FFF" id="svg_5" height="460" width="460" y="20" x="20" fill-opacity="null" stroke-opacity="null" stroke-width="40" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_2" y2="250" x2="500" y1="250" x1="0" stroke-width="40" stroke="#FFF" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_3" y2="250" x2="175" y1="0" x1="250" stroke-width="40" stroke="#FFF" fill="none"/>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_4" y2="250" x2="325" y1="0" x1="250" stroke-width="40" stroke="#FFF" fill="none"/>
+ </g>
+</svg>
