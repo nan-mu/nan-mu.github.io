@@ -8,5 +8,4 @@ tags:
 
 这是在南京大学蒋炎炎老师课程上提到的[`gdb`指南][1]。还是计划翻译一遍同时希望自己能学到完整的用法。当然我会提前邮件询问一下。
 
-[1]: https://www-users.cse.umn.edu/~kauffman/tutorials/gdb.html	"CSCI 2021 Quick Guide to gdb: The GNU Debugger"
-
+[1]: https://www-users.cse.umn.edu/~kauffman/tutorials/gdb.html "CSCI 2021 Quick Guide to gdb: The GNU Debugger"
