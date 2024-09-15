@@ -46,7 +46,7 @@ sudo tcpdump -i wlan0 -n port 67 or port 68 -vvv -w dhcp.pcap
 * `-vvv`表示三倍`verbose`，非常详细的输出。
 * `-w dhcp.pcap`将结果输出到这个文件当中
 
-直接运行它会阻塞当前的终端，其实我们最好使用`nohup`让他在后台运行。因为`dhcp`行为有可能会得到一个新的`ip`，然后`ssh`连接就断掉了。现在新开一个终端。然后关注`netplan`。使用以下命令得到一个很高级的`ip `输出：
+直接运行它会阻塞当前的终端，其实我们最好使用`nohup`让他在后台运行。因为`dhcp`行为有可能会得到一个新的`ip`，然后`ssh`连接就断掉了。现在新开一个终端。然后关注`netplan`。使用以下命令得到一个很高级的`ip`输出：
 
 ```bash
 $ netplan status wlan0 --all
@@ -102,20 +102,20 @@ sudo tcpdump -r dhcp.pcap -vvv -n
 ```pcap
 17:40:34.726372 IP (tos 0xc0, ttl 64, id 31929, offset 0, flags [DF], proto UDP (17), length 293)
     murpi.bootpc > _gateway.bootps: [udp sum ok] BOOTP/DHCP, Request from <设备mac> (oui Unknown), length 265, xid 0xe7c51c4, secs 1419, Flags [none] (0x0000)
-	  Client-IP <主机名称>
-	  Client-Ethernet-Address <设备mac> (oui Unknown)
-	  Vendor-rfc1048 Extensions
-	    Magic Cookie 0x63825363
-	    DHCP-Message (53), length 1: Release
-	    Client-ID (61), length 19: hardware-type 255, aa:2a:a0:93:00:02:00:00:ab:11:94:70:41:b6:ba:7d:b9:8a
-	    END (255), length 0
+      Client-IP <主机名称>
+      Client-Ethernet-Address <设备mac> (oui Unknown)
+      Vendor-rfc1048 Extensions
+        Magic Cookie 0x63825363
+        DHCP-Message (53), length 1: Release
+        Client-ID (61), length 19: hardware-type 255, aa:2a:a0:93:00:02:00:00:ab:11:94:70:41:b6:ba:7d:b9:8a
+        END (255), length 0
 ```
 
 但我们只关心`dhcp`的内容也就是这样：
 
 ```pcap
 Client-IP murpi
-Client-Ethernet-Address 2c:cf:67:36:6c:e1 (oui Unknown)
+Client-Ethernet-Address <设备mac> (oui Unknown)
 Vendor-rfc1048 Extensions
 Magic Cookie 0x63825363
 DHCP-Message (53), length 1: Release
@@ -151,4 +151,3 @@ send dhcp-lease-time 86400;
 > 写在最后，给在南望山校区的同学们。之前和老师确认，每个账号只能运行3台设备同时使用；我自己在后台尝试确认只能手动绑定3条MAC；但老师告诉我，在他们的后台，每个账号可以绑定5条MAC。
 
 [^1]: https://zh.wikipedia.org/wiki/%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E8%AE%BE%E7%BD%AE%E5%8D%8F%E8%AE%AE "wiki-动态主机设置协议"
-[^2]: https://www.cnblogs.com/wongbingming/p/13212306.html "很好的tcpdump使用指南"
