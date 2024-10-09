@@ -6,10 +6,11 @@ WORKDIR /workspace
 
 # 安装 Yarn 包管理器
 # 使用官方安装脚本安装最新版本的 Yarn
-RUN corepack enable && corepack prepare yarn@stable --activate
+RUN corepack enable && \
+    corepack prepare yarn@stable --activate
 
 # 全局安装 Hexo CLI
-RUN yarn global add hexo-cli
+RUN npm install -g hexo-cli
 
 # 将 Yarn 全局安装路径添加到 PATH
 ENV PATH=/workspace/node_modules/.bin:$PATH

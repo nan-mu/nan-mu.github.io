@@ -1,10 +1,12 @@
-version: '3.8'
-
 services:
   hexo:
     build:
       context: .
       dockerfile: Dockerfile
+      args: # 注意使用代理构建容器
+        - HTTP_PROXY=http://172.20.112.1:7890
+        - HTTPS_PROXY=http://172.20.112.1:7890
+        - NO_PROXY=localhost,127.0.0.1
     volumes:
       - .:/workspace
       - /workspace/node_modules
