@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  hexo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/workspace
+      - /workspace/node_modules
+    ports:
+      - "4000:4000"
+    tty: true
