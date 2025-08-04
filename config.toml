@@ -19,10 +19,6 @@ insert_anchor_links = "heading"
 radion_title = "Nan Mu's blog"
 radion_menu = [
     {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/blog", name = "Blog"},
-    {url = "$BASE_URL/book", name = "Book"},
-    {url = "$BASE_URL/note", name = "Note"},
-    {url = "$BASE_URL/report", name = "Report"},
     {url = "$BASE_URL/tags", name = "Tags"},
     {url = "$BASE_URL/categories", name = "Categories"},
 ]
