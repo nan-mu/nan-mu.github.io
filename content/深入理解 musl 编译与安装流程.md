@@ -3,7 +3,7 @@ title = "深入理解 musl 编译与安装流程：从源码到自动化"
 date = 2024-08-18 17:12:31
 
 [taxonomies]
-categories = ["demo"]
+categories = ["tutorial"]
 tags = ["compiler", "musl", "docker"]
 +++
 

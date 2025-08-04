@@ -3,7 +3,7 @@ title = "检查cug校园网的dhcp"
 date = 2024-09-04 22:28:24
 
 [taxonomies]
-categories = ["tutorial"]
+categories = ["recode"]
 tags = ["CUG", "network"]
 +++
 
