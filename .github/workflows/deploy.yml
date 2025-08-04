@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+
+# 触发条件：推送到 main 分支或带有 update* 标签的提交
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'update*'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Zola
+        uses: taiki-e/install-action@zola
+
+      - name: Build
+        run: zola build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
