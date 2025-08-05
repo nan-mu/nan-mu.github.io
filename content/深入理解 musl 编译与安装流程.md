@@ -27,7 +27,7 @@ tags = ["compiler", "musl", "docker"]
 
 > 注：这里的“非安全”安装与交叉工具链的概念有所区分。
 
-<!-- ![image-20240818193647589](image-20240818193647589.png) -->
+![image-20240818193647589](https://img.nan-mu.asia/picgo/image-20240818193647589.png)
 
 
 ## 获取 musl 源码
