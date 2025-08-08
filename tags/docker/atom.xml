@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - docker</title>
+    <subtitle>存放博客，笔记，以及一些有趣的东西 </subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nan-mu.asia/tags/docker/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nan-mu.asia"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-18T17:12:31+00:00</updated>
+    <id>https://nan-mu.asia/tags/docker/atom.xml</id>
+    <entry xml:lang="en">
+        <title>深入理解 musl 编译与安装流程：从源码到自动化</title>
+        <published>2024-08-18T17:12:31+00:00</published>
+        <updated>2024-08-18T17:12:31+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/shen-ru-li-jie-musl-bian-yi-yu-an-zhuang-liu-cheng/"/>
+        <id>https://nan-mu.asia/shen-ru-li-jie-musl-bian-yi-yu-an-zhuang-liu-cheng/</id>
+        
+        <summary type="html">&lt;p&gt;最近终于有时间处理一些历史遗留问题，于是有了这篇文章。我的目标是彻底掌握如何从零编译并安装一个纯净的 musl 工具链，并顺便梳理整个流程，方便后续自动化和多架构适配。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

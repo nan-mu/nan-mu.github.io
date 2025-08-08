@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - raspi</title>
+    <subtitle>存放博客，笔记，以及一些有趣的东西 </subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nan-mu.asia/tags/raspi/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nan-mu.asia"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-08-26T09:17:39+00:00</updated>
+    <id>https://nan-mu.asia/tags/raspi/atom.xml</id>
+    <entry xml:lang="en">
+        <title>树莓派简单使用指南</title>
+        <published>2024-08-26T09:17:39+00:00</published>
+        <updated>2024-08-26T09:17:39+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/shu-mei-pai-jian-dan-shi-yong-zhi-nan/"/>
+        <id>https://nan-mu.asia/shu-mei-pai-jian-dan-shi-yong-zhi-nan/</id>
+        
+        <summary type="html">&lt;p&gt;这篇文章的目的是为了让读者尽快掌握将树莓派部署到生产环境中的用法。以树莓派5和树莓派4b为例，前者使用&lt;code&gt;ubuntu 24 Noble&lt;&#x2F;code&gt;而后者使用&lt;code&gt;ubuntu 22 Jammy&lt;&#x2F;code&gt;。我将尽量照顾所有细节让初学者既明白如何操作也明白此种三昧。本教程假设工作在类&lt;code&gt;debian&lt;&#x2F;code&gt;发行版上。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

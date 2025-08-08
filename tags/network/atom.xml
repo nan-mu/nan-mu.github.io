@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - network</title>
+    <subtitle>存放博客，笔记，以及一些有趣的东西 </subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nan-mu.asia/tags/network/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nan-mu.asia"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-09-04T22:28:24+00:00</updated>
+    <id>https://nan-mu.asia/tags/network/atom.xml</id>
+    <entry xml:lang="en">
+        <title>检查cug校园网的dhcp</title>
+        <published>2024-09-04T22:28:24+00:00</published>
+        <updated>2024-09-04T22:28:24+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/jian-cha-cugxiao-yuan-wang-de-dhcp/"/>
+        <id>https://nan-mu.asia/jian-cha-cugxiao-yuan-wang-de-dhcp/</id>
+        
+        <summary type="html">&lt;p&gt;今年学校推出了无需校园卡的校园网套餐，体验良好。最重要的是，似乎接入了正版校园网！之前的公网网段是 59.73.207.&lt;em&gt;，现在变成了 59.71.244.&lt;&#x2F;em&gt;。经查询，后者的实名信息确实是我们学校，前者是广东某学校。现在终于成为了正式的教育网用户。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

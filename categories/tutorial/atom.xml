@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title> - tutorial</title>
+    <subtitle>存放博客，笔记，以及一些有趣的东西 </subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nan-mu.asia/categories/tutorial/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nan-mu.asia"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-08-08T00:00:00+00:00</updated>
+    <id>https://nan-mu.asia/categories/tutorial/atom.xml</id>
+    <entry xml:lang="en">
+        <title>给初学者的 Zola 建站建议</title>
+        <published>2025-08-08T00:00:00+00:00</published>
+        <updated>2025-08-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/gei-chu-xue-zhe-de-zolajian-zhan-jiao-cheng/"/>
+        <id>https://nan-mu.asia/gei-chu-xue-zhe-de-zolajian-zhan-jiao-cheng/</id>
+        
+        <summary type="html">&lt;p&gt;如果你完全没有静态站点构建的经验，那么本文的目标就是——&lt;strong&gt;帮你用最快的方式，少踩坑地搭建好自己的 Zola 静态站点&lt;&#x2F;strong&gt;。我们将直接介绍一种基于第三方主题的部署方法，让你尽快拥有可用的网站。如果你的目标是“先有一个能用的网站”，直接用别人现成的站点做基础，效率会比跟着文档一步步创建高得多。等网站上线后，你再慢慢学习 Zola 的细节，逐步替换成自己的代码和配置，也不迟。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>树莓派简单使用指南</title>
+        <published>2024-08-26T09:17:39+00:00</published>
+        <updated>2024-08-26T09:17:39+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/shu-mei-pai-jian-dan-shi-yong-zhi-nan/"/>
+        <id>https://nan-mu.asia/shu-mei-pai-jian-dan-shi-yong-zhi-nan/</id>
+        
+        <summary type="html">&lt;p&gt;这篇文章的目的是为了让读者尽快掌握将树莓派部署到生产环境中的用法。以树莓派5和树莓派4b为例，前者使用&lt;code&gt;ubuntu 24 Noble&lt;&#x2F;code&gt;而后者使用&lt;code&gt;ubuntu 22 Jammy&lt;&#x2F;code&gt;。我将尽量照顾所有细节让初学者既明白如何操作也明白此种三昧。本教程假设工作在类&lt;code&gt;debian&lt;&#x2F;code&gt;发行版上。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>深入理解 musl 编译与安装流程：从源码到自动化</title>
+        <published>2024-08-18T17:12:31+00:00</published>
+        <updated>2024-08-18T17:12:31+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/shen-ru-li-jie-musl-bian-yi-yu-an-zhuang-liu-cheng/"/>
+        <id>https://nan-mu.asia/shen-ru-li-jie-musl-bian-yi-yu-an-zhuang-liu-cheng/</id>
+        
+        <summary type="html">&lt;p&gt;最近终于有时间处理一些历史遗留问题，于是有了这篇文章。我的目标是彻底掌握如何从零编译并安装一个纯净的 musl 工具链，并顺便梳理整个流程，方便后续自动化和多架构适配。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>
