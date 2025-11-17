@@ -30,9 +30,6 @@ index_format = "elasticlunr_json"
 [extra]
 author = "Ye Zhengnan"
 github = "https://github.com/nan-mu"
-# fediverse.creator = "@username@my.instance.example.com"
-# fediverse.rel_me = "https://my.instance.example.com/@username"
-# mastodon = "https://my.instance.example.com/@username"
 radion_menu = [
     {url = "$BASE_URL/", name = "Home"},
     {url = "$BASE_URL/categories", name = "Categories"},
@@ -51,3 +48,9 @@ giscus_data_category_id = "DIC_kwDOMkLDRc4CtsQb"
 revision_history = true
 blog_github_repo_url = "https://github.com/nan-mu/nan-mu.github.io"
 lang_aliases = { en = "English", zh = "中文", jp = "日本語", ko = "한국어" }
+font_cdn = "custom"
+font_name = "LXGW WenKai GB Screen"
+font_weights = ["main"]   # custom 模式下无意义，但必须给一个值
+font_css_urls = [
+    "https://cdn.jsdelivr.net/npm/cn-fontsource-lxgw-wen-kai-gb-screen/font.css"
+]
