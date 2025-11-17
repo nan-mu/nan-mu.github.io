@@ -1,38 +1,66 @@
 base_url = "https://nan-mu.asia"
 compile_sass = true
 theme = "radion"
+
+# 默认语言
+default_language = "zh"
+
+[languages]
+
+# ---------- 中文（默认语言） ----------
+[languages.zh]
+title = "中文站点~"
+language_code = "zh"
+description = "存放博客，笔记，以及一些有趣的东西 "
+generate_feeds = true
+build_search_index = true
 taxonomies = [
     {name = "categories", feed = true},
     {name = "tags", feed = true},
 ]
-build_search_index = true
-description = "存放博客，笔记，以及一些有趣的东西 "
-generate_feeds = true
 
+# ---------- 英文 ----------
+[languages.en]
+title = "English site~"
+language_code = "en"
+generate_feeds = true
+build_search_index = true
+taxonomies = [
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
+]
+
+# ---------- 日文 ----------
+[languages.jp]
+title = "日本語サイト~"
+language_code = "jp"
+generate_feeds = true
+build_search_index = true
+taxonomies = [
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
+]
+
+# ---------- Markdown 配置 ----------
 [markdown]
 highlight_code = true
 highlight_theme = "one-dark"
 insert_anchor_links = "heading"
 
+# ---------- 主题 Radion 的配置 ----------
 [extra]
-# config for radion
 radion_title = "Nan Mu's blog"
 radion_menu = [
     {url = "$BASE_URL", name = "Home"},
     {url = "$BASE_URL/tags", name = "Tags"},
     {url = "$BASE_URL/categories", name = "Categories"},
 ]
+
 author = "楠木"
 latex = true
 enable_search = true
 theme = "toggle"
 toc = true
 comments = true
-giscus_repo = "nan-mu/nan-mu.github.io"
-giscus_repo_id = "R_kgDOMkLDRQ"
-giscus_data_category_id = "DIC_kwDOMkLDRc4CtsQb"
 github = "https://github.com/nan-mu"
 codeblock = true
-
-[search]
-index_format = "elasticlunr_json"
