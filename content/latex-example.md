@@ -111,7 +111,7 @@ character to escape it: `\\$`.
 
 Example:
 
-```text
+```
 > To write the dollar sign, use \\$ in your text. That way, if there is another
 > dollar sign in your text like this \\$, it will not be confused with the start of a math
 > environment.

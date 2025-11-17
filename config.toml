@@ -1,66 +1,53 @@
 base_url = "https://nan-mu.asia"
 compile_sass = true
+title = "A blog by Ye Zhengnan"
+description = "真希望我能写好多好博客"
+generate_feeds = true
 theme = "radion"
+taxonomies = [
+    {name = "categories", feed = true},
+    {name = "tags", feed = true},
+]
+build_search_index = true
+default_language = "en"
 
-# 默认语言
-default_language = "zh"
-
-[languages]
-
-# ---------- 中文（默认语言） ----------
 [languages.zh]
-title = "中文站点~"
-language_code = "zh"
-description = "存放博客，笔记，以及一些有趣的东西 "
-generate_feeds = true
-build_search_index = true
-taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
-]
 
-# ---------- 英文 ----------
-[languages.en]
-title = "English site~"
-language_code = "en"
-generate_feeds = true
-build_search_index = true
-taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
-]
-
-# ---------- 日文 ----------
 [languages.jp]
-title = "日本語サイト~"
-language_code = "jp"
-generate_feeds = true
-build_search_index = true
-taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
-]
 
-# ---------- Markdown 配置 ----------
 [markdown]
 highlight_code = true
 highlight_theme = "one-dark"
 insert_anchor_links = "heading"
-
-# ---------- 主题 Radion 的配置 ----------
-[extra]
-radion_title = "Nan Mu's blog"
-radion_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/tags", name = "Tags"},
-    {url = "$BASE_URL/categories", name = "Categories"},
+highlight_themes_css = [
+  { theme = "one-dark", filename = "syntax/syntax-theme-dark.css" },
+  { theme = "gruvbox-dark", filename = "syntax/syntax-theme-light.css" },
 ]
 
-author = "楠木"
+[search]
+index_format = "elasticlunr_json"
+
+[extra]
+author = "Ye Zhengnan"
+github = "https://github.com/nan-mu"
+# fediverse.creator = "@username@my.instance.example.com"
+# fediverse.rel_me = "https://my.instance.example.com/@username"
+# mastodon = "https://my.instance.example.com/@username"
+radion_menu = [
+    {url = "$BASE_URL/", name = "Home"},
+    {url = "$BASE_URL/categories", name = "Categories"},
+    {url = "$BASE_URL/tags", name = "Tags"},
+]
+radion_title = "Ye Zhengnan's Blog"
+codeblock = true
 latex = true
 enable_search = true
-theme = "toggle"
-toc = true
+theme = "toggle" # options: {light, dark, auto, toggle}
+favicon = true
 comments = true
-github = "https://github.com/nan-mu"
-codeblock = true
+giscus_repo = "nan-mu/nan-mu.github.io"
+giscus_repo_id = "R_kgDOMkLDRQ"
+giscus_data_category_id = "DIC_kwDOMkLDRc4CtsQb"
+revision_history = true
+blog_github_repo_url = "https://github.com/nan-mu/nan-mu.github.io"
+lang_aliases = { en = "English", zh = "中文", jp = "日本語", ko = "한국어" }

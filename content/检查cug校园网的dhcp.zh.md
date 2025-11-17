@@ -1,10 +1,6 @@
 +++
 title = "检查cug校园网的dhcp"
 date = 2024-09-04 22:28:24
-
-[taxonomies]
-categories = ["recode"]
-tags = ["CUG", "network"]
 +++
 
 今年学校推出了无需校园卡的校园网套餐，体验良好。最重要的是，似乎接入了正版校园网！之前的公网网段是 59.73.207.*，现在变成了 59.71.244.*。经查询，后者的实名信息确实是我们学校，前者是广东某学校。现在终于成为了正式的教育网用户。
@@ -113,7 +109,7 @@ sudo tcpdump -r dhcp.pcap -vvv -n
 
 在输出中应该能看到向广播地址发送的 `BOOTP/DHCP, Request` 请求。典型的第一个请求如下：
 
-```pcap
+```
 17:40:34.726372 IP (tos 0xc0, ttl 64, id 31929, offset 0, flags [DF], proto UDP (17), length 293)
     murpi.bootpc > _gateway.bootps: [udp sum ok] BOOTP/DHCP, Request from <设备mac> (oui Unknown), length 265, xid 0xe7c51c4, secs 1419, Flags [none] (0x0000)
       Client-IP <主机名称>
@@ -127,7 +123,7 @@ sudo tcpdump -r dhcp.pcap -vvv -n
 
 关键的 DHCP 信息部分：
 
-```pcap
+```
 Client-IP murpi
 Client-Ethernet-Address <设备mac> (oui Unknown)
 Vendor-rfc1048 Extensions
