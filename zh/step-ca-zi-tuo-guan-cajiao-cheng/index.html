@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+      
+        
+        <meta name="description" content="&amp;lt;施工中🚧&amp;gt;
+用域名定向到局域网内你喜欢的web服务很好，有个小缺点是一旦在公司内网或校园网下这也将将你的服务暴露给其他人。万一，某天同事心血来潮对你进行http攻击就不好了。https将解决这一问题，我使用step-ca在mac os上加密了我的树莓派上所有的服务，它们运行地很好，希望这也能帮到你" />
+        <meta property="og:description" content="&amp;lt;施工中🚧&amp;gt;
+用域名定向到局域网内你喜欢的web服务很好，有个小缺点是一旦在公司内网或校园网下这也将将你的服务暴露给其他人。万一，某天同事心血来潮对你进行http攻击就不好了。https将解决这一问题，我使用step-ca在mac os上加密了我的树莓派上所有的服务，它们运行地很好，希望这也能帮到你" />
+        <meta property="twitter:description" content="&amp;lt;施工中🚧&amp;gt;
+用域名定向到局域网内你喜欢的web服务很好，有个小缺点是一旦在公司内网或校园网下这也将将你的服务暴露给其他人。万一，某天同事心血来潮对你进行http攻击就不好了。https将解决这一问题，我使用step-ca在mac os上加密了我的树莓派上所有的服务，它们运行地很好，希望这也能帮到你" />
+      
+    
+
+    <!-- Title -->
+    
+      
+    
+    <title>
+    
+    step-ca: 自拓管CA教程
+    
+</title>
+
+    <!-- Additional Facebook Meta Tags -->
+    <meta property="og:site_name" content="" />
+    <meta
+      property="og:url"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;zh&#x2F;step-ca-zi-tuo-guan-cajiao-cheng&#x2F;"
+    />
+    <meta
+      property="og:type"
+      content="article"
+    />
+    <meta property="og:title" content="step-ca: 自拓管CA教程" />
+
+    <!-- Additional Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;zh&#x2F;step-ca-zi-tuo-guan-cajiao-cheng&#x2F;"
+    />
+    <meta name="twitter:title" content="step-ca: 自拓管CA教程" />
+
+    <!-- Additional Fediverse Tags -->
+     
+
+    <!-- Cover images -->
+    
+    
+
+    <meta
+      property="og:image"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
+    />
+
+    <meta
+      name="twitter:image"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
+    />
+
+    <!-- Favicons -->
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="step-ca: 自拓管CA教程" />
+    <link
+      rel="manifest"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/site.webmanifest"
+    />
+    
+
+    <!-- RSS Feed -->
+    
+
+    <!-- Load Styles -->
+    
+      <link
+        rel="stylesheet"
+        href="https://nan-mu.asia/site.css"
+      />
+    
+
+    <!-- Syntax highlighting theming -->
+    
+
+    <!-- Load Fonts -->
+    
+
+  
+
+
+
+
+
+
+  
+    <link href="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;cn-fontsource-lxgw-wen-kai-gb-screen&#x2F;font.css" rel="stylesheet">
+  
+
+
+
+<!-- Forcing Font -->
+<style>
+body {
+  font-family:
+    "LXGW WenKai GB Screen", Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+    monospace, serif !important;
+}
+</style>
+
+
+    <!-- Pass Theme Preference as Data Attribute -->
+    <script src="https://nan-mu.asia/js/init-theme.js"></script>
+
+    <!-- Reference return to click position script -->
+    <script defer src="https://nan-mu.asia/js/reference-return.js"></script>
+
+    <!-- Additional scripts -->
+    
+      
+        <script defer src="https://nan-mu.asia/js/codeblock.js"></script>
+      
+      
+        <script src="https://nan-mu.asia/js/toggle-theme.js"></script>
+      
+      
+<!-- MathJax script for rendering LaTeX math equations -->
+<script src="https://nan-mu.asia/js/mathjax-config.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async
+></script>
+
+
+      
+<script type="text/javascript" src="https://nan-mu.asia/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://nan-mu.asia/js/search.js"></script>
+
+    
+  </head>
+
+  <!-- Body element (contents of the page) -->
+  <body class="hack main container">
+    
+  
+    
+    
+      
+  
+  <section class="nav-header">
+    <nav
+      itemscope
+      itemtype="http://schema.org/SiteNavigationElement"
+      class="navbar"
+    >
+      <section class="nav-links">
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://nan-mu.asia/"
+        >
+          <span itemprop="name">Home</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://nan-mu.asia/categories"
+        >
+          <span itemprop="name">Categories</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://nan-mu.asia/tags"
+        >
+          <span itemprop="name">Tags</span>
+        </a>
+        
+      </section>
+    </nav>
+    <aside class="user-actions-container">
+      
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="search-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </svg>
+      <input type="text" id="search" placeholder="Search..." />
+      <section class="search-results" aria-live="polite">
+        <article class="search-results__items" role="list"></article>
+      </section>
+       
+      <a id="dark-mode-toggle" href="#">
+        <img
+          src="https://nan-mu.asia/icons/sun.svg"
+          id="sun-icon"
+          class="invert-icon"
+          alt="Light mode"
+        />
+        <img
+          src="https://nan-mu.asia/icons/moon.svg"
+          id="moon-icon"
+          alt="Dark mode"
+        />
+      </a>
+        
+      <a
+        href="https:&#x2F;&#x2F;github.com&#x2F;nan-mu"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://nan-mu.asia/icons/github.svg"
+          id="github-icon"
+          alt="GitHub"
+          class="social-icon"
+        />
+      </a>
+        
+      <div class="lang-dropdown-container">
+        <button
+          class="lang-dropdown-btn"
+          id="lang-dropdown-btn"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="lang-dropdown-menu"
+          type="button"
+        >
+          中文
+        </button>
+        <div
+          class="lang-dropdown-menu"
+          id="lang-dropdown-menu"
+          role="listbox"
+        >
+          
+            
+            
+              
+              
+            
+            
+            <a href="https://nan-mu.asia/jp/">
+              日本語
+            </a>
+          
+            
+            
+              
+              
+            
+            
+            <a href="https://nan-mu.asia">
+              English
+            </a>
+          
+        </div>
+      </div> 
+    </aside>
+  </section>
+  
+
+    
+
+
+    <main>
+      
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">step-ca: 自拓管CA教程</h1>
+        <data class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <data>5 minute read</data>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2025-11-18
+</data>
+    </header>
+
+    <article itemprop="articleBody">
+        
+            <p>&lt;施工中🚧&gt;
+用域名定向到局域网内你喜欢的web服务很好，有个小缺点是一旦在公司内网或校园网下这也将将你的服务暴露给其他人。万一，某天同事心血来潮对你进行http攻击就不好了。https将解决这一问题，我使用step-ca在mac os上加密了我的树莓派上所有的服务，它们运行地很好，希望这也能帮到你</p>
+
+            
+
+            <!-- Render the rest of the content after removing the summary portion -->
+            
+<span id="continue-reading"></span>
+<p>我的的目标是通过域名指向一台树莓派上的所有服务，但有点特殊的是我希望为两个网段上都签发各自的证书。比如在<code>192.168.2.x</code>上的域名是*.moonrpi.asia，在<code>172.168.x</code>上的域名是*.xxx.moonrpi.asia。因为前者是交换机设备的网段后者是公共wifi的网段。理论上应该有办法使用一个域名自动找到最佳ip，但我现在不打算做，我还不知道如何做。</p>
+<p>在我的网络中，有一台mac mini连接外网并且连接交换机。所以我将它作为ca服务器，也就是运行step-ca。所以第一步应该安装step-ca，我建议参考<a href="https://smallstep.com/docs/step-ca/installation/">这里</a>以适应不同平台。但你首先应该明白一些事。</p>
+<p>CA的作用是给其他服务签发证书，在这个过程中只会用到这些：</p>
+<ul>
+<li>根证书<code>root_ca.crt</code>，这是服务器的公钥<sup class="footnote-reference"><a href="#1">1</a></sup>。你需要下载到你，使用https的客户端中。比如你给你的jellyfin服务器安装了https证书，那<code>root_ca.crt</code>应该安装在访问它的地方，当然，这是使用https的一种方法，我使用它，它相对简单。但要注意，他的内容没有受到任何<code>担保</code>。</li>
+<li>中间密钥<sup class="footnote-reference"><a href="#2">2</a></sup><code>intermediate_ca.key</code>。可以理解为，CA信任一台设备（可以是下级CA或服务器），所以给他一个中间证书来签发自己的服务器证书，或者用它在CA自己的服务器签发，总之，直接用根证书签发是可能的，但不常见。</li>
+<li>服务器密钥<code>server.key</code>。这是服务器给自己的证明，主要是用来加密服务器证书。使用中间密钥和服务器密钥（当然如果证书有密码那还是没法避免的）就是设置https所需的一切。</li>
+<li>中间证书<code>intermediate_ca.crt</code>和服务器证书<code>server.crt</code>。前者CA得到，后者通过中间密钥和服务器密钥签发。它们两者构成了认证链（<code>fullchain</code>）。当用户的请求发到服务器后，服务器返回这两个证书和它们的签名。而根证书可以认证这些信息是否真实。</li>
+<li>服务器密钥<code>server.key</code>，这是签名后的产物，只会放在服务器中，用于加密信息给客户端的公钥解密。</li>
+</ul>
+<p>所以颁发证书的过程就是以下几步：</p>
+<ol>
+<li>提供<code>server.key</code>和<code>intermediate_ca.key</code>和必要信息得到<code>server.crt</code></li>
+<li>将<code>sercer.crt</code>和<code>intermediate_ca.crt</code>合成<code>fullchain.crt</code></li>
+<li>在你的web服务或反向代理中添加<code>fullchain.crt</code>和<code>server.key</code></li>
+</ol>
+<h2 id="de-dao-intermediate-ca"><a class="zola-anchor" href="#de-dao-intermediate-ca" aria-label="Anchor link for: de-dao-intermediate-ca">得到<code>intermediate_ca</code></a></h2>
+<p>现在我要给我局域网上的服务用局域网上的ca颁发https证书。ca在mac上，ip是192.168.2.1。服务器是linux，使用caddy，有多个ip。我需要颁发的域名如下：
+这些给ip:172.30.15.104
+alist.cug.moonrpi.asia
+ani.cug.moonrpi.asia
+ani-qbit.cug.moonrpi.asia
+bc.cug.moonrpi.asia
+ddns.cug.moonrpi.asia
+jelly.cug.moonrpi.asia
+pbh.cug.moonrpi.asia
+qbit.cug.moonrpi.asia</p>
+<p>这些给ip192.168.2.2</p>
+<p>alist.moonrpi.asia
+ani.moonrpi.asia
+ani-qbit.moonrpi.asia
+bc.moonrpi.asia
+jelly.moonrpi.asia
+pbh.moonrpi.asia
+qbit.moonrpi.asia
+ddns.moonrpi.asia</p>
+<p>你首先应该将这些ip生成一个tokens，然后又tokens得到服务器证书。然后将中间证书和服务器证书混合得到完整证书链。这些操作应该在服务器上进行，服务器上已经有中间证书和密钥。</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#6c7079;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="font-style:italic;color:#5f697a;"># 生成一个新的私钥 (2048位)
+</span><span style="color:#eb6772;">openssl</span><span style="color:#abb2bf;"> genpkey</span><span style="color:#eb6772;"> -algorithm</span><span style="color:#abb2bf;"> RSA</span><span style="color:#eb6772;"> -out</span><span style="color:#abb2bf;"> server-172.30.15.104.key</span><span style="color:#eb6772;"> -pkeyopt</span><span style="color:#abb2bf;"> rsa_keygen_bits:2048
+</span><span style="color:#eb6772;">openssl</span><span style="color:#abb2bf;"> genpkey</span><span style="color:#eb6772;"> -algorithm</span><span style="color:#abb2bf;"> RSA</span><span style="color:#eb6772;"> -out</span><span style="color:#abb2bf;"> server-192.168.2.2.key</span><span style="color:#eb6772;"> -pkeyopt</span><span style="color:#abb2bf;"> rsa_keygen_bits:2048
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 列出 172.30.15.104 对应的域名和 IP
+</span><span style="color:#eb6772;">SAN_172</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;DNS:alist.cug.moonrpi.asia, DNS:ani.cug.moonrpi.asia, DNS:ani-qbit.cug.moonrpi.asia, DNS:bc.cug.moonrpi.asia, DNS:ddns.cug.moonrpi.asia, DNS:jelly.cug.moonrpi.asia, DNS:pbh.cug.moonrpi.asia, DNS:qbit.cug.moonrpi.asia, IP:172.30.15.104&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 使用私钥和 SAN 扩展生成 CSR
+</span><span style="color:#eb6772;">openssl</span><span style="color:#abb2bf;"> req</span><span style="color:#eb6772;"> -new -key</span><span style="color:#abb2bf;"> server-172.30.15.104.key</span><span style="color:#eb6772;"> -out</span><span style="color:#abb2bf;"> server-172.30.15.104.csr \
+</span><span style="color:#eb6772;">-subj </span><span style="color:#9acc76;">&quot;/CN=cug.moonrpi.asia-services/O=MoonRPI/L=Local/C=CN&quot; </span><span style="color:#abb2bf;">\
+</span><span style="color:#eb6772;">-addext </span><span style="color:#9acc76;">&quot;subjectAltName=$</span><span style="color:#eb6772;">SAN_172</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 列出 192.168.2.2 对应的域名
+</span><span style="color:#eb6772;">SAN_192</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;DNS:alist.moonrpi.asia, DNS:ani.moonrpi.asia, DNS:ani-qbit.moonrpi.asia, DNS:bc.moonrpi.asia, DNS:jelly.moonrpi.asia, DNS:pbh.moonrpi.asia, DNS:qbit.moonrpi.asia, DNS:ddns.moonrpi.asia, IP:192.168.2.2&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 使用私钥和 SAN 扩展生成 CSR
+</span><span style="color:#eb6772;">openssl</span><span style="color:#abb2bf;"> req</span><span style="color:#eb6772;"> -new -key</span><span style="color:#abb2bf;"> server-192.168.2.2.key</span><span style="color:#eb6772;"> -out</span><span style="color:#abb2bf;"> server-192.168.2.2.csr \
+</span><span style="color:#eb6772;">-subj </span><span style="color:#9acc76;">&quot;/CN=moonrpi.asia-services/O=MoonRPI/L=Local/C=CN&quot; </span><span style="color:#abb2bf;">\
+</span><span style="color:#eb6772;">-addext </span><span style="color:#9acc76;">&quot;subjectAltName=$</span><span style="color:#eb6772;">SAN_192</span><span style="color:#9acc76;">&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 1. 在 Linux 服务器上（如果之前没有，重新设置 SAN 变量）
+</span><span style="color:#eb6772;">SAN_172</span><span style="color:#adb7c9;">=</span><span style="color:#9acc76;">&quot;DNS:alist.cug.moonrpi.asia, DNS:ani.cug.moonrpi.asia, DNS:ani-qbit.cug.moonrpi.asia, DNS:bc.cug.moonrpi.asia, DNS:ddns.cug.moonrpi.asia, DNS:jelly.cug.moonrpi.asia, DNS:pbh.cug.moonrpi.asia, DNS:qbit.cug.moonrpi.asia, IP:172.30.15.104&quot;
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 2. 将扩展配置写入一个临时文件 (e.g., san_config_172.ext)
+</span><span style="color:#5ebfcc;">echo </span><span style="color:#9acc76;">&quot;subjectAltName=$</span><span style="color:#eb6772;">SAN_172</span><span style="color:#9acc76;">&quot; </span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> san_config_172.ext
+</span><span style="color:#5ebfcc;">echo </span><span style="color:#9acc76;">&quot;extendedKeyUsage=serverAuth&quot; </span><span style="color:#adb7c9;">&gt;&gt;</span><span style="color:#abb2bf;"> san_config_172.ext
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 在 macOS CA 上执行签名命令
+</span><span style="color:#eb6772;">openssl</span><span style="color:#abb2bf;"> x509</span><span style="color:#eb6772;"> -req -in</span><span style="color:#abb2bf;"> server-172.30.15.104.csr \
+</span><span style="color:#eb6772;">    -CA</span><span style="color:#abb2bf;"> intermediate_ca.crt</span><span style="color:#eb6772;"> -CAkey</span><span style="color:#abb2bf;"> intermediate_ca.key \
+</span><span style="color:#eb6772;">    -CAcreateserial -out</span><span style="color:#abb2bf;"> server-172.30.15.104.crt \
+</span><span style="color:#eb6772;">    -days</span><span style="color:#abb2bf;"> 3650</span><span style="color:#eb6772;"> -sha256 </span><span style="color:#abb2bf;">\
+</span><span style="color:#eb6772;">    -extfile</span><span style="color:#abb2bf;"> san_config_172.ext
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 构建 172.30.15.104 的证书链
+</span><span style="color:#eb6772;">cat</span><span style="color:#abb2bf;"> server-172.30.15.104.crt intermediate_ca.crt </span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> fullchain-172.30.15.104.pem
+</span><span style="color:#abb2bf;">
+</span><span style="font-style:italic;color:#5f697a;"># 构建 192.168.2.2 的证书链
+</span><span style="color:#eb6772;">cat</span><span style="color:#abb2bf;"> server-192.168.2.2.crt intermediate_ca.crt </span><span style="color:#adb7c9;">&gt;</span><span style="color:#abb2bf;"> fullchain-192.168.2.2.pem
+</span></code></pre>
+<h2 id="can-kao"><a class="zola-anchor" href="#can-kao" aria-label="Anchor link for: can-kao">参考</a></h2>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>非对称加密 https://zh.wikipedia.org/wiki/%E5%85%AC%E5%BC%80%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>中间证书 https://www.ssldragon.com/zh/blog/root-intermediate-certificate/</p>
+</div>
+
+
+        
+    </article>
+
+    <!-- Comment section -->
+    
+      
+        
+          <script
+  src="https://giscus.app/client.js"
+  data-repo="nan-mu&#x2F;nan-mu.github.io"
+  data-repo-id="R_kgDOMkLDRQ"
+  data-category="General"
+  data-category-id="DIC_kwDOMkLDRc4CtsQb"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+
+  
+  data-theme="preferred_color_scheme"
+  
+
+  data-lang="en"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
+
+        
+      
+    
+
+
+    <!-- Page footer -->
+    
+    <footer>
+        <hr>
+        <p>
+            
+            
+            
+        </p>
+
+        <!-- Revision history (optional) -->
+        
+          
+            
+              
+                
+                
+                <section class="revision-history">
+                  <a href="https:&#x2F;&#x2F;github.com&#x2F;nan-mu&#x2F;nan-mu.github.io&#x2F;commits&#x2F;main&#x2F;content&#x2F;step-ca: 自托管CA教程.zh.md" target="_blank" rel="noopener noreferrer">
+                    (revision history)
+                  </a>
+                </section>
+              
+            
+          
+        
+
+        
+        
+    </footer>
+
+
+</article>
+
+
+    </main>
+    
+
+  </body>
+</html>

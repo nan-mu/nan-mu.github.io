@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>A blog by Ye Zhengnan</title>
+    <subtitle>真希望我能写好多好博客</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://nan-mu.asia/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://nan-mu.asia"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-11-19T00:00:00+00:00</updated>
+    <id>https://nan-mu.asia/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Cloudflare outage on November 18, 2025</title>
+        <published>2025-11-19T00:00:00+00:00</published>
+        <updated>2025-11-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/18-november-2025-outage/"/>
+        <id>https://nan-mu.asia/18-november-2025-outage/</id>
+        
+        <summary type="html">&lt;p&gt;For the original text, please refer to Cloudflare outage on November 18, 2025 (link above). You can switch languages using the menu in the upper-right corner to view the translation.&lt;&#x2F;p&gt;
+&lt;p&gt;This is an unofficial Chinese translation provided for reference only. Please refer to the official Cloudflare text for accuracy.
+All rights to the original content belong to Cloudflare.&lt;&#x2F;p&gt;
+&lt;p&gt;原文请参考 &lt;a href=&quot;https:&#x2F;&#x2F;blog.cloudflare.com&#x2F;18-november-2025-outage&#x2F;&quot;&gt;Cloudflare outage on November 18, 2025&lt;&#x2F;a&gt;。点击右上角切换语言可查看翻译。&lt;&#x2F;p&gt;
+&lt;p&gt;本文为非官方中文翻译，仅供参考，请以 Cloudflare 官方原文为准。
+译文仅供参考，如与原文存在歧义或差异，以原文为准。译者不对因译文使用产生的任何法律责任承担直接责任。
+原文版权归 Cloudflare 所有。&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Markdown Formatting Test</title>
+        <published>2024-12-13T00:00:00+00:00</published>
+        <updated>2024-12-13T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/markdown-demo/"/>
+        <id>https://nan-mu.asia/markdown-demo/</id>
+        
+        <summary type="html">&lt;p&gt;This page demonstrates various Markdown formatting features that can be used in
+the theme. The following sections showcase different elements, such as blockquotes,
+headings, lists, and more.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Table of Contents Test</title>
+        <published>2024-12-08T00:00:00+00:00</published>
+        <updated>2024-12-08T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/toc/"/>
+        <id>https://nan-mu.asia/toc/</id>
+        
+        <summary type="html">&lt;p&gt;This page demonstrates the table of contents feature with a mix of heading
+levels, inline links, and nested elements.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Code Example</title>
+        <published>2017-09-24T00:00:00+00:00</published>
+        <updated>2017-09-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/code-example/"/>
+        <id>https://nan-mu.asia/code-example/</id>
+        
+        <summary type="html">&lt;p&gt;Have code snippets complete with &lt;strong&gt;clipboard functionality&lt;&#x2F;strong&gt; and &lt;strong&gt;fancy
+language tags&lt;&#x2F;strong&gt;. No more boring code snippets in your pages. Oh yeah baby! Click
+on this article to see some code in action.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>LaTeX Example</title>
+        <published>2017-09-24T00:00:00+00:00</published>
+        <updated>2017-09-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://nan-mu.asia/latex-example/"/>
+        <id>https://nan-mu.asia/latex-example/</id>
+        
+        <summary type="html">&lt;p&gt;This theme allows you to use MathJax directly in your Markdown! Click on this
+article to see some fancy math in action. Little teaser:
+$$ x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

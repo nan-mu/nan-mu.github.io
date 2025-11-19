@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+      
+        
+        <meta name="description" content="如果你完全没有静态站点构建的经验，那么本文的目标就是——帮你用最快的方式，少踩坑地搭建好自己的 Zola 静态站点。我们将直接介绍一种基于第三方主题的部署方法，让你尽快拥有可用的网站。如果你的目标是“先有一个能用的网站”，直接用别人现成的站点做基础，效率会比跟着文档一步步创建高得多。等网站上线后，你再慢慢学习 Zola 的细节，逐步替换成自己的代码和配置，也不迟。" />
+        <meta property="og:description" content="如果你完全没有静态站点构建的经验，那么本文的目标就是——帮你用最快的方式，少踩坑地搭建好自己的 Zola 静态站点。我们将直接介绍一种基于第三方主题的部署方法，让你尽快拥有可用的网站。如果你的目标是“先有一个能用的网站”，直接用别人现成的站点做基础，效率会比跟着文档一步步创建高得多。等网站上线后，你再慢慢学习 Zola 的细节，逐步替换成自己的代码和配置，也不迟。" />
+        <meta property="twitter:description" content="如果你完全没有静态站点构建的经验，那么本文的目标就是——帮你用最快的方式，少踩坑地搭建好自己的 Zola 静态站点。我们将直接介绍一种基于第三方主题的部署方法，让你尽快拥有可用的网站。如果你的目标是“先有一个能用的网站”，直接用别人现成的站点做基础，效率会比跟着文档一步步创建高得多。等网站上线后，你再慢慢学习 Zola 的细节，逐步替换成自己的代码和配置，也不迟。" />
+      
+    
+
+    <!-- Title -->
+    
+      
+    
+    <title>
+    
+    给初学者的 Zola 建站建议
+    
+</title>
+
+    <!-- Additional Facebook Meta Tags -->
+    <meta property="og:site_name" content="" />
+    <meta
+      property="og:url"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;zh&#x2F;gei-chu-xue-zhe-de-zolajian-zhan-jiao-cheng&#x2F;"
+    />
+    <meta
+      property="og:type"
+      content="article"
+    />
+    <meta property="og:title" content="给初学者的 Zola 建站建议" />
+
+    <!-- Additional Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;zh&#x2F;gei-chu-xue-zhe-de-zolajian-zhan-jiao-cheng&#x2F;"
+    />
+    <meta name="twitter:title" content="给初学者的 Zola 建站建议" />
+
+    <!-- Additional Fediverse Tags -->
+     
+
+    <!-- Cover images -->
+    
+    
+
+    <meta
+      property="og:image"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
+    />
+
+    <meta
+      name="twitter:image"
+      content="https:&#x2F;&#x2F;nan-mu.asia&#x2F;icons&#x2F;favicon&#x2F;web-app-manifest-512x512.png"
+    />
+
+    <!-- Favicons -->
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="给初学者的 Zola 建站建议" />
+    <link
+      rel="manifest"
+      href="https:&#x2F;&#x2F;nan-mu.asia/icons/favicon/site.webmanifest"
+    />
+    
+
+    <!-- RSS Feed -->
+    
+
+    <!-- Load Styles -->
+    
+      <link
+        rel="stylesheet"
+        href="https://nan-mu.asia/site.css"
+      />
+    
+
+    <!-- Syntax highlighting theming -->
+    
+
+    <!-- Load Fonts -->
+    
+
+  
+
+
+
+
+
+
+  
+    <link href="https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;cn-fontsource-lxgw-wen-kai-gb-screen&#x2F;font.css" rel="stylesheet">
+  
+
+
+
+<!-- Forcing Font -->
+<style>
+body {
+  font-family:
+    "LXGW WenKai GB Screen", Menlo, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New,
+    monospace, serif !important;
+}
+</style>
+
+
+    <!-- Pass Theme Preference as Data Attribute -->
+    <script src="https://nan-mu.asia/js/init-theme.js"></script>
+
+    <!-- Reference return to click position script -->
+    <script defer src="https://nan-mu.asia/js/reference-return.js"></script>
+
+    <!-- Additional scripts -->
+    
+      
+        <script defer src="https://nan-mu.asia/js/codeblock.js"></script>
+      
+      
+        <script src="https://nan-mu.asia/js/toggle-theme.js"></script>
+      
+      
+<!-- MathJax script for rendering LaTeX math equations -->
+<script src="https://nan-mu.asia/js/mathjax-config.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async
+></script>
+
+
+      
+<script type="text/javascript" src="https://nan-mu.asia/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://nan-mu.asia/js/search.js"></script>
+
+    
+  </head>
+
+  <!-- Body element (contents of the page) -->
+  <body class="hack main container">
+    
+  
+    
+    
+      
+  
+  <section class="nav-header">
+    <nav
+      itemscope
+      itemtype="http://schema.org/SiteNavigationElement"
+      class="navbar"
+    >
+      <section class="nav-links">
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://nan-mu.asia/"
+        >
+          <span itemprop="name">Home</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://nan-mu.asia/categories"
+        >
+          <span itemprop="name">Categories</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://nan-mu.asia/tags"
+        >
+          <span itemprop="name">Tags</span>
+        </a>
+        
+      </section>
+    </nav>
+    <aside class="user-actions-container">
+      
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="search-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </svg>
+      <input type="text" id="search" placeholder="Search..." />
+      <section class="search-results" aria-live="polite">
+        <article class="search-results__items" role="list"></article>
+      </section>
+       
+      <a id="dark-mode-toggle" href="#">
+        <img
+          src="https://nan-mu.asia/icons/sun.svg"
+          id="sun-icon"
+          class="invert-icon"
+          alt="Light mode"
+        />
+        <img
+          src="https://nan-mu.asia/icons/moon.svg"
+          id="moon-icon"
+          alt="Dark mode"
+        />
+      </a>
+        
+      <a
+        href="https:&#x2F;&#x2F;github.com&#x2F;nan-mu"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://nan-mu.asia/icons/github.svg"
+          id="github-icon"
+          alt="GitHub"
+          class="social-icon"
+        />
+      </a>
+        
+      <div class="lang-dropdown-container">
+        <button
+          class="lang-dropdown-btn"
+          id="lang-dropdown-btn"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-controls="lang-dropdown-menu"
+          type="button"
+        >
+          中文
+        </button>
+        <div
+          class="lang-dropdown-menu"
+          id="lang-dropdown-menu"
+          role="listbox"
+        >
+          
+            
+            
+              
+              
+            
+            
+            <a href="https://nan-mu.asia">
+              English
+            </a>
+          
+            
+            
+              
+              
+            
+            
+            <a href="https://nan-mu.asia/jp/">
+              日本語
+            </a>
+          
+        </div>
+      </div> 
+    </aside>
+  </section>
+  
+
+    
+
+
+    <main>
+      
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">给初学者的 Zola 建站建议</h1>
+        <data class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <data>3 minute read</data>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2025-08-08
+</data>
+    </header>
+
+    <article itemprop="articleBody">
+        
+            <p>如果你完全没有静态站点构建的经验，那么本文的目标就是——<strong>帮你用最快的方式，少踩坑地搭建好自己的 Zola 静态站点</strong>。我们将直接介绍一种基于第三方主题的部署方法，让你尽快拥有可用的网站。如果你的目标是“先有一个能用的网站”，直接用别人现成的站点做基础，效率会比跟着文档一步步创建高得多。等网站上线后，你再慢慢学习 Zola 的细节，逐步替换成自己的代码和配置，也不迟。</p>
+
+            
+
+            <!-- Render the rest of the content after removing the summary portion -->
+            
+<span id="continue-reading"></span><h2 id="di-yi-bu-an-zhuang-zola-bing-tiao-xuan-zhu-ti"><a class="zola-anchor" href="#di-yi-bu-an-zhuang-zola-bing-tiao-xuan-zhu-ti" aria-label="Anchor link for: di-yi-bu-an-zhuang-zola-bing-tiao-xuan-zhu-ti">第一步：安装 Zola 并挑选主题</a></h2>
+<p>先去阅读 Zola 的<a href="https://www.getzola.org/documentation/getting-started/overview/">官方文档</a>，其中会告诉你如何在本地<a href="https://www.getzola.org/documentation/getting-started/installation/">安装 Zola</a>，并提供一个<a href="https://www.getzola.org/themes/">第三方主题市场</a>。<br />
+现在，请先完成 Zola 安装，并从主题市场选一个你喜欢的主题。</p>
+<h2 id="di-er-bu-zhi-jie-shi-yong-bie-ren-yi-jing-da-hao-de-mo-ban"><a class="zola-anchor" href="#di-er-bu-zhi-jie-shi-yong-bie-ren-yi-jing-da-hao-de-mo-ban" aria-label="Anchor link for: di-er-bu-zhi-jie-shi-yong-bie-ren-yi-jing-da-hao-de-mo-ban">第二步：直接使用别人已经搭好的模板</a></h2>
+<p>官方文档会从零开始带你创建站点，但如果你只是想<strong>尽快看到结果</strong>，可以直接跳过这些基础步骤。</p>
+<p>做法很简单：</p>
+<ol>
+<li>在 GitHub 上搜索使用该主题的公开仓库。</li>
+<li>找一个你觉得满意的版本，<code>git clone</code> 到本地。</li>
+<li>删除原作者的博客内容和个性化配置。</li>
+<li>按自己的需求添加文章、修改配置。</li>
+</ol>
+<p>这样，你就是在一个已经能正常运行的环境里修改，而不是从零开始搭积木。这是初学者最快上手的方法。</p>
+
+
+        
+    </article>
+
+    <!-- Comment section -->
+    
+      
+        
+          <script
+  src="https://giscus.app/client.js"
+  data-repo="nan-mu&#x2F;nan-mu.github.io"
+  data-repo-id="R_kgDOMkLDRQ"
+  data-category="General"
+  data-category-id="DIC_kwDOMkLDRc4CtsQb"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+
+  
+  data-theme="preferred_color_scheme"
+  
+
+  data-lang="en"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
+
+        
+      
+    
+
+
+    <!-- Page footer -->
+    
+    <footer>
+        <hr>
+        <p>
+            
+            
+            
+        </p>
+
+        <!-- Revision history (optional) -->
+        
+          
+            
+              
+                
+                
+                <section class="revision-history">
+                  <a href="https:&#x2F;&#x2F;github.com&#x2F;nan-mu&#x2F;nan-mu.github.io&#x2F;commits&#x2F;main&#x2F;content&#x2F;给初学者的zola建站教程.zh.md" target="_blank" rel="noopener noreferrer">
+                    (revision history)
+                  </a>
+                </section>
+              
+            
+          
+        
+
+        
+        
+    </footer>
+
+
+</article>
+
+
+    </main>
+    
+
+  </body>
+</html>

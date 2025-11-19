@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500"><svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" id="SvgjsRect1048" height="460" width="460" y="20" x="20" fill-opacity="null" stroke-opacity="null" stroke-width="40" fill="none"></rect>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="SvgjsLine1047" y2="250" x2="500" y1="250" x1="0" stroke-width="40" stroke="#000" fill="none"></line>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="SvgjsLine1046" y2="250" x2="175" y1="0" x1="250" stroke-width="40" stroke="#000" fill="none"></line>
+  <line stroke-linecap="undefined" stroke-linejoin="undefined" id="SvgjsLine1045" y2="250" x2="325" y1="0" x1="250" stroke-width="40" stroke="#000" fill="none"></line>
+ </g>
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+@media (prefers-color-scheme: dark) { :root { filter: none; } }
+</style></svg>
